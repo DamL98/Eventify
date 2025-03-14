@@ -1,0 +1,2 @@
+# Eventify
+Eventify app
