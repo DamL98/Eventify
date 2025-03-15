@@ -3,4 +3,4 @@ Eventify app
 
 usunięty github desktop
 naprawione hehe
-pushuje
+pushuje chyba ciebie
