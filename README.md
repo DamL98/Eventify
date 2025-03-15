@@ -1,4 +1,4 @@
 # Eventify
 Eventify app
 
-usuniete linie
+usunięty github desktop
