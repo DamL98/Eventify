@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 21 Mar 2025, 22:35
+-- Czas generowania: 22 Mar 2025, 10:53
 -- Wersja serwera: 10.4.24-MariaDB
 -- Wersja PHP: 8.1.6
 
@@ -30,9 +30,25 @@ SET time_zone = "+00:00";
 CREATE TABLE `additional_supply` (
   `ID` int(1) NOT NULL,
   `Name` varchar(50) NOT NULL,
-  `Quantity` float(5,3) NOT NULL,
+  `Quantity` int(1) NOT NULL,
   `Price` float(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `additional_supply`
+--
+
+INSERT INTO `additional_supply` (`ID`, `Name`, `Quantity`, `Price`) VALUES
+(1, 'Sztućce bambusowe', 50, 28.57),
+(2, 'Talerzyki papierowe', 100, 12.50),
+(3, 'Kubki papierowe', 50, 13.90),
+(4, 'Kieliszki jednorazowe', 50, 7.49),
+(5, 'Czapki imprezowe', 20, 15.50),
+(6, 'Kubki Czerwone beer pong', 50, 29.90),
+(7, 'Piłeczki ping pong', 60, 35.00),
+(8, 'Tacki Grillowe', 5, 10.50),
+(9, 'Wykałaczki duże', 50, 10.50),
+(10, 'Wykałaczki małe', 1000, 3.67);
 
 -- --------------------------------------------------------
 
@@ -99,6 +115,26 @@ CREATE TABLE `drinks` (
   `Price` float(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `drinks`
+--
+
+INSERT INTO `drinks` (`ID`, `Name`, `Size`, `Price`) VALUES
+(1, 'Coca-Cola', 1.750, 8.49),
+(2, 'Coca-Cola Zero', 1.750, 8.49),
+(3, 'Pepsi', 1.750, 7.49),
+(4, 'Pepsi MAX', 1.750, 7.49),
+(5, 'Fanta', 1.750, 8.49),
+(6, 'Sprite', 1.750, 8.49),
+(7, '7up', 1.750, 7.49),
+(8, 'Mirinda', 1.750, 7.49),
+(9, 'Tymbark jabłko-mięta', 2.000, 5.79),
+(10, 'Tymbark wiśnia-jabłko', 2.000, 5.79),
+(11, 'Tymbark jabłko-brzoskwinia', 2.000, 5.79),
+(12, 'Tymbark Jabłko', 1.000, 5.29),
+(13, 'Schweppes Tonic', 1.000, 5.99),
+(14, 'RedBull', 0.250, 6.49);
+
 -- --------------------------------------------------------
 
 --
@@ -108,9 +144,37 @@ CREATE TABLE `drinks` (
 CREATE TABLE `snaks` (
   `ID` int(1) NOT NULL,
   `Name` varchar(50) NOT NULL,
-  `Size` float(5,3) NOT NULL,
+  `Size` int(1) NOT NULL,
   `Price` float(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `snaks`
+--
+
+INSERT INTO `snaks` (`ID`, `Name`, `Size`, `Price`) VALUES
+(1, 'Lays Solone', 130, 7.89),
+(2, 'Lays Papryka', 130, 7.89),
+(3, 'Lays Cebula', 130, 7.89),
+(4, 'Crunchips Papryka', 140, 6.99),
+(5, 'Crunchips Solone', 140, 6.99),
+(6, 'Crunchips Ser i Cebulka', 140, 6.99),
+(7, 'Crunchips X-cut papryka', 140, 6.99),
+(8, 'Crunchips X-cut ser i cebula', 140, 6.99),
+(9, 'Crunchips X-cut chakalaka', 140, 6.99),
+(10, 'Crunchips X-cut Hot Chili', 140, 6.99),
+(11, 'Kabanosy Tarczyński drobiowe', 105, 6.79),
+(12, 'Kabanosy Tarczyński wieprzowe ', 105, 6.79),
+(13, 'Paluszki solone', 200, 4.39),
+(14, 'Precelki solone', 200, 4.39),
+(15, 'Krakersy', 180, 8.95),
+(16, 'Dip serowy', 220, 13.99),
+(17, 'Dip guacamole', 220, 14.39),
+(18, 'Nachos serowe', 200, 5.99),
+(19, 'Nachos solone', 200, 5.99),
+(20, 'Orzeszki ziemne', 140, 6.94),
+(21, 'Orzeszki w panierce papryka', 240, 5.49),
+(22, 'Orzeszki w panierce cebula', 240, 5.49);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -135,6 +199,12 @@ ALTER TABLE `drinks`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indeksy dla tabeli `snaks`
+--
+ALTER TABLE `snaks`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- AUTO_INCREMENT dla zrzuconych tabel
 --
 
@@ -142,7 +212,7 @@ ALTER TABLE `drinks`
 -- AUTO_INCREMENT dla tabeli `additional_supply`
 --
 ALTER TABLE `additional_supply`
-  MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT dla tabeli `alcohol`
@@ -154,7 +224,13 @@ ALTER TABLE `alcohol`
 -- AUTO_INCREMENT dla tabeli `drinks`
 --
 ALTER TABLE `drinks`
-  MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT dla tabeli `snaks`
+--
+ALTER TABLE `snaks`
+  MODIFY `ID` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
