@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Eventify</h1>
-    <button onclick="togglePopup('formPopup')">Otworz</button>
+    <button onclick="togglePopup('formPopup')">Lets Party!</button>
 
     <div id="formPopup" class="popup">
         <form id="selectionForm">
@@ -20,13 +20,13 @@
                 <?php foreach ($napoje as $item) : ?>
                     <label>
                         <input type="checkbox" name="napoje" value="<?php echo $item['ID']; ?>">
-                        <?php echo $item['Name']; ?>&nbsp</br><label>Waga: </label>
-                        <?php echo $item['Size']; ?>&nbsp<label>Cena: </label>
-                        <?php echo $item['Price']; ?>
+                         <?php echo $item['Name']; ?><!--&nbsp</br><label>Waga: </label>
+                        <?php #echo $item['Size']; ?>&nbsp<label>Cena: </label>
+                        <?php #echo $item['Price']; ?> -->
 
                     </label><br>
                 <?php endforeach; ?>
-                <button type="button" onclick="nextStep()">Dalej</button>
+                <button type="button" onclick="nextStep()">Next</button>
             </div>
 
             <!-- Alkohols -->
@@ -35,15 +35,15 @@
                 <?php foreach ($alkohole as $item) : ?>
                     <label>
                         <input type="checkbox" name="alkohole" value="<?php echo $item['ID']; ?>">
-                        <?php echo $item['Name']; ?>&nbsp</br><label>%: </label>
-                        <?php echo $item['Procent_of_alcohol']; ?>&nbsp</br><label>Cena: </label>
-                        <?php echo $item['Price']; ?>&nbsp</br><label>Moc: </label>
-                        <?php echo $item['Power']; ?>
+                        <?php echo $item['Name']; ?><!-- &nbsp</br><label>%: </label>
+                        <?php #echo $item['Procent_of_alcohol']; ?>&nbsp</br><label>Cena: </label>
+                        <?php #echo $item['Price']; ?>&nbsp</br><label>Moc: </label>
+                        <?php #echo $item['Power']; ?> -->
 
                     </label><br>
                 <?php endforeach; ?>
-                <button type="button" onclick="prevStep()">Wstecz</button>
-                <button type="button" onclick="nextStep()">Dalej</button>
+                <button type="button" onclick="prevStep()">Back</button>
+                <button type="button" onclick="nextStep()">Next</button>
             </div>
 
             <!-- Snaks -->
@@ -52,13 +52,14 @@
                 <?php foreach ($przekaski as $item) : ?>
                     <label>
                         <input type="checkbox" name="przekaski" value="<?php echo $item['ID']; ?>">
-                        <?php echo $item['Name']; ?>&nbsp</br><label>Waga: </label>
-                        <?php echo $item['Size']; ?>&nbsp<label>Cena: </label>
-                        <?php echo $item['Price']; ?>
+                        <?php echo $item['Name']; ?>
+                        <!-- &nbsp</br><label>Waga: </label>
+                        <?php #echo $item['Size']; ?>&nbsp<label>Cena: </label>
+                        <?php #echo $item['Price']; ?>  -->
                     </label><br>
                 <?php endforeach; ?>
-                <button type="button" onclick="prevStep()">Wstecz</button>
-                <button type="button" onclick="nextStep()">Dalej</button>
+                <button type="button" onclick="prevStep()">Back</button>
+                <button type="button" onclick="nextStep()">Next</button>
             </div>
 
             <!-- Supply -->
@@ -67,22 +68,22 @@
                 <?php foreach ($zaopatrzenie as $item) : ?>
                     <label>
                         <input type="checkbox" name="zaopatrzenie" value="<?php echo $item['ID']; ?>">
-                        <?php echo $item['Name']; ?>&nbsp</br><label>Waga: </label>
+                        <?php echo $item['Name']; ?><!-- &nbsp</br><label>Waga: </label>
                         <?php echo $item['Quantity']; ?>&nbsp<label>Cena: </label>
-                        <?php echo $item['Price']; ?>
+                        <?php #echo $item['Price']; ?>-->
                     </label><br>
                 <?php endforeach; ?>
-                <button type="button" onclick="prevStep()">Wstecz</button>
-                <button type="button" onclick="submitForm()">Zakończ</button>
+                <button type="button" onclick="prevStep()">Back</button>
+                <button type="button" onclick="submitForm()">End form</button>
             </div>
         </form>
-        <button onclick="togglePopup('formPopup')">Zamknij</button>
+        <button onclick="togglePopup('formPopup')">Close</button>
     </div>
 
     <div id="summaryPopup" class="popup">
         <h2>Podsumowanie</h2>
         <div id="summaryContent"></div>
-        <button onclick="togglePopup('summaryPopup')">Zamknij</button>
+        <button onclick="togglePopup('summaryPopup')">Close</button>
     </div>
 
 

@@ -26,6 +26,6 @@ function getTableData($conn, $tableName) {
 }
 
 $napoje = getTableData($conn, 'drinks');
-$alkohole = getTableData($conn, 'alcohols');
+$alkohole = getTableData($conn, 'alcohol');
 $przekaski = getTableData($conn, 'snaks');
 $zaopatrzenie = getTableData($conn, 'additional_supply');
