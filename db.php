@@ -3,7 +3,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = ''; // Zmień, jeśli masz hasło do bazy danych
-$dbname = 'Eventify';
+$dbname = 'eventify';
 
 $conn = new mysqli($host, $user, $password, $dbname);
 
