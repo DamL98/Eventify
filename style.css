@@ -1,3 +1,16 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #A5158C; /* Tło dla lepszej estetyki */
+    box-sizing: border-box;
+    overflow: hidden; /* Zapobiegaj przewijaniu strony */
+}
+
 .popup {
     display: none;
     position: fixed;
@@ -5,17 +18,261 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: white;
+    background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
+
 .popup.active {
-    display: block;
+    display: flex;
+    /* top: 50%;
+    left: 50%; */
 }
 .step {
     display: none;
+    flex-direction: column;
+    width: 100%;
 }
 .step.active {
-    display: block;
+    display: flex;
 }
+
+#alkohole {
+    /* overflow: scroll; */
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+/* === Styl strony startowej === */
+
+.hero.start-page {
+    /* position: relative; */
+    /* height: 100vh; */
+    background-color: #A5158C;
+    /* overflow: hidden; */
+}
+
+/* Grafika szampana po lewej, bliżej środka */
+.start-left {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%) rotate(-20deg);
+    width: 500px;
+    z-index: 0;
+}
+
+/* Grafika balonów po prawej, bliżej środka */
+.start-right {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 500px;
+    z-index: 0;
+}
+
+/* Napis i przycisk w centrum */
+.start-center {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+    .start-center h1 {
+        font-size: 8rem;
+        font-weight: 700;
+        color: #F6DC43;
+        letter-spacing: 10px;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 60px;
+        text-transform: uppercase;
+    }
+
+/* Przycisk okrągły */
+.hero-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: #410445;
+    color: #F6DC43;
+    border: 2px solid #FF2DF1;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #A5158C;
+    transform: scale(1.05);
+}
+
+/* === Styl strony drugiej  === */
+
+
+.form-container {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    background-color: #410445;
+    padding: 8px;
+    border-radius: 20px;
+    /* max-width: 700px; */
+    max-height: auto;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: #F6DC43;
+    }
+
+    .form-container label {
+        /*display: block;
+         margin: 10px 0; 
+        font-weight: 600;
+        color: #F6DC43;
+        font-size: 1.2rem;*/
+        flex: 0 0 calc(25% - 10px); /* 25% szerokości minus odstęp */
+    box-sizing: border-box; /* Upewnia się, że padding i border są wliczane */
+    text-align: center; /* Opcjonalne: wyśrodkowanie tekstu */
+    padding: 10px; /* Opcjonalne: margines wewnętrzny */
+    /* border: 1px solid #ccc; Opcjonalne: styl granicy */
+    border-radius: 5px; /* Opcjonalne: zaokrąglone rogi */
+    
+    }
+
+    .form-container input[type="checkbox"] {
+        /* margin-right: 10px; */
+        accent-color: #FF2DF1;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .form-container input[type="checkbox"] + span {
+        font-size: 1.2rem;
+        color: #F6DC43;
+    }
+
+    .step-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .step-buttons button{
+        margin-right: 25px;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-wrap: wrap; /* Pozwala na zawijanie elementów */
+        justify-content: center; /* Dostosowuje elementy do lewej */
+        gap: 10px; /* Odstępy między elementami */
+        padding: 10px;
+    }
+
+    .checkbox-group label {
+        flex: 0 0 calc(25% - 10px); /* Każdy element zajmuje 1/4 szerokości z uwzględnieniem odstępów */
+        box-sizing: border-box; /* Wlicza padding i border */
+        text-align: center; /* Wyśrodkowanie tekstu */
+        padding: 10px; /* Margines wewnętrzny */
+        color: #F6DC43;
+        font-size: 1.7rem;
+        min-width: 76px;
+
+        /* border: 1px solid #ccc; */
+        border-radius: 5px; /* Zaokrąglone rogi */
+        /* background-color: #f8f8f8; */
+    }
+
+    .form-container input,
+    .form-container select {
+        width: 100%;
+        padding: 48px;
+        font-size: 4rem;
+        border-radius: 20px;
+        border: 4px solid #FF2DF1;
+        margin-bottom: 2rem;
+        box-sizing: border-box;
+    }
+
+    .form-container .hero-button {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        font-size: 2.2rem;
+        border-radius: 100px;
+        line-height: normal;
+        margin-top: 2rem;
+        background-color: #410445;
+        color: #F6DC43;
+        border: 6px solid #FF2DF1;
+        transition: transform 0.3s ease;
+        text-align: center;
+        max-width: 300px;
+    }
+
+        .form-container .hero-button:hover {
+            background-color: #A5158C;
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                width: 100%;
+                padding: 15px;
+            }
+        
+            .form-container h2 {
+                font-size: 2rem;
+            }
+        
+            .form-container label {
+                font-size: 1rem;
+            }
+        
+            .hero-button {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .checkbox-group label {
+                flex: 0 0 calc(50% - 10px); /* Dwa elementy w wierszu */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .checkbox-group label {
+                flex: 0 0 calc(100% - 10px); /* Jeden element w wierszu */
+            }
+        }
