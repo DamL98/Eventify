@@ -110,7 +110,8 @@ body, html {
 /* Przycisk okrągły */
 .hero-button {
     margin-top: 20px;
-    width: 100%;
+    width: 250px;
+    height: 250px;
     padding: 10px 20px;
     font-size: 3rem;
     font-weight: 600;
@@ -118,9 +119,12 @@ body, html {
     background-color: #410445;
     color: #F6DC43;
     border: 2px solid #FF2DF1;
-    border-radius: 25px;
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-button:hover {
