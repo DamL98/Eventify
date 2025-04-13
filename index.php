@@ -34,7 +34,7 @@
                 <div class="checkbox-group">
                     <?php foreach ($napoje as $item) : ?>
                             <label>
-                                <input type="checkbox" name="napoje" value="<?php echo $item['ID']; ?>">
+                                <input type="checkbox" name="Napoje" value="<?php echo $item['Name']; ?>">
                                 <?php echo $item['Name']; ?><!--&nbsp</br><label>Waga: </label>
                                 <?php #echo $item['Size']; ?>&nbsp<label>Cena: </label>
                                 <?php #echo $item['Price']; ?> -->
@@ -55,7 +55,7 @@
                 <div class="checkbox-group">
                     <?php foreach ($alkohole as $item) : ?>
                         <label>
-                            <input type="checkbox" name="alkohole" value="<?php echo $item['ID']; ?>">
+                            <input type="checkbox" name="Alkohole" value="<?php echo $item['Name']; ?>">
                             <?php echo $item['Name']; ?><!-- &nbsp</br><label>%: </label>
                             <?php #echo $item['Procent_of_alcohol']; ?>&nbsp</br><label>Cena: </label>
                             <?php #echo $item['Price']; ?>&nbsp</br><label>Moc: </label>
@@ -81,7 +81,7 @@
                 <div class="checkbox-group">
                     <?php foreach ($przekaski as $item) : ?>
                         <label>
-                            <input type="checkbox" name="przekaski" value="<?php echo $item['ID']; ?>">
+                            <input type="checkbox" name="Przekaski" value="<?php echo $item['Name']; ?>">
                             <?php echo $item['Name']; ?>
                             <!-- &nbsp</br><label>Waga: </label>
                             <?php #echo $item['Size']; ?>&nbsp<label>Cena: </label>
@@ -106,7 +106,7 @@
                 <div class="checkbox-group">
                     <?php foreach ($zaopatrzenie as $item) : ?>
                         <label>
-                            <input type="checkbox" name="zaopatrzenie" value="<?php echo $item['ID']; ?>">
+                            <input type="checkbox" name="Zaopatrzenie" value="<?php echo $item['Name']; ?>">
                             <?php echo $item['Name']; ?><!-- &nbsp</br><label>Waga: </label>
                             <?php echo $item['Quantity']; ?>&nbsp<label>Cena: </label>
                             <?php #echo $item['Price']; ?>-->

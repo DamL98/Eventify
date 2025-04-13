@@ -10,7 +10,44 @@ body, html {
     box-sizing: border-box;
     overflow: hidden; /* Zapobiegaj przewijaniu strony */
 }
+#summaryPopup{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #410445;
+    color: #F6DC43;
+    width: 90%;
+}
 
+#summaryContent{
+    padding: 10px;
+    font-size: 1.6rem;
+    justify-content: flex-start;
+}
+#summaryContent div{
+
+}
+
+.spanKey{
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+
+.spanValue{
+    color: #fff;
+    font-style: italic;
+}
+
+#summaryPopup h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #F6DC43;
+}
+
+#summaryPopup .hero-button{
+    scale: 0.5;
+}
 .popup {
     display: none;
     position: fixed;
@@ -39,9 +76,6 @@ body, html {
     display: flex;
 }
 
-#alkohole {
-    /* overflow: scroll; */
-}
 
 .form1 {
     display: flex;
