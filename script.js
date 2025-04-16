@@ -71,7 +71,7 @@ let currentStep = 0;
                             .join('<br>');
         
                     document.getElementById('summaryContent').innerHTML = summary;
-                    togglePopup('summaryPopup');
+                     togglePopup('summaryPopup');
                 })
                 .catch(error => console.error('Error:', error));
         }

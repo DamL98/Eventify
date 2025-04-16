@@ -27,6 +27,28 @@
 
 <div id="formPopup" class="form-container popup">
     <form class="form1" id="selectionForm">
+            <div class="step">
+                <h2>Zapisy</h2>
+                    <div id="1step" class="checkbox-group">
+
+                        <label for="miejscowosc">
+                            Miejscowość: <input class="label-1step" type="text" name="miejscowosc" style="padding:36px;font-size:1.6rem;text-align:center">
+                        </label>
+                        <label for="osoby">
+                            Ilość osob: <input class="label-1step" type="number" name="osoby" style="padding:36px;font-size:1.6rem;text-align:center">
+                        </label>
+                        <label>
+                            Data: <input class="label-1step" type="date" name="data" style="padding:36px;font-size:1.6rem;text-align:center">
+                        </label>
+
+                        
+                    </div>
+
+                    <div class="step-buttons"> 
+                        <button class="hero-button" type="button" onclick="nextStep()">Next</button>
+                        <button class="hero-button" onclick="togglePopup('formPopup')">Close</button>
+                    </div>
+                </div>
 
             <!-- Drinks -->
             <div class="step">
