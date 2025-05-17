@@ -1,8 +1,8 @@
 <?php
-// Połączenie z bazą danych
+
 $host = 'localhost';
 $user = 'root';
-$password = ''; // Zmień, jeśli masz hasło do bazy danych
+$password = ''; 
 $dbname = 'eventify';
 
 $conn = new mysqli($host, $user, $password, $dbname);
