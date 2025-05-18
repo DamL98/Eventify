@@ -18,3 +18,9 @@ C:\xampp\htdocs\
 
 Stronę odpalasz z linku:
 http://localhost/eventify/index.php
+
+Lista kolorów:
+#410445
+#FF2DF1
+#F6DC43
+#A5158C
