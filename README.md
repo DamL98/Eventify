@@ -16,7 +16,7 @@ Xampp chodzi na ustawieniach domyślnych, logowanie do bazy danymi z php też je
 Repo musisz sklonować z poziomu VS Code(masz opcje Clone jak otworzysz puste VS Code) do folderu:
 C:\xampp\htdocs\
 
-Stronę odpalasz z linku:
+lokalny skrót
 http://localhost/eventify/index.php
 
 Lista kolorów:
