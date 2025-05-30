@@ -2,7 +2,7 @@
 require_once "db.php";
 header('Content-Type: application/json');
 
-// pobiera json z http request
+// pobiera json z http req
 $data = json_decode(file_get_contents('php://input'), true);
 
 $response = [];

@@ -11,13 +11,17 @@
 
     <title>Eventify</title>
 </head>
+
+<div id="preloader"></div>
+<div class="overlay"></div>
+
 <body class="hero start-page">
 
 <!-- Szampan -->
 <img src="img/champagne.png" alt="champagne" class="start-left" />
 
 <!-- Balony -->
-<img src="img/balloons.png" alt="balloons" class="start-right" />
+<img src="img/balloons2.png" alt="balloons" class="start-right" />
 
 
 
@@ -32,21 +36,21 @@
                     <div id="1step" class="checkbox-group">
 
                         <label for="miejscowosc">
-                            Miejscowość: <input class="label-1step" type="text" name="miejscowosc" style="padding:36px;font-size:1.6rem;text-align:center">
+                            Miejscowość: <input class="label-1step" type="text" name="Miejscowosc" style="padding:36px;font-size:1.6rem;text-align:center">
                         </label>
                         <label for="osoby">
-                            Ilość osob: <input class="label-1step" type="number" name="osoby" style="padding:36px;font-size:1.6rem;text-align:center">
+                            Ilość osob: <input class="label-1step" type="number" name="Osoby" style="padding:36px;font-size:1.6rem;text-align:center">
                         </label>
                         <label>
-                            Data: <input class="label-1step" type="date" name="data" style="padding:36px;font-size:1.6rem;text-align:center">
+                            Data: <input class="label-1step" type="date" name="Data" style="padding:36px;font-size:1.6rem;text-align:center">
                         </label>
 
                         
                     </div>
 
                     <div class="step-buttons"> 
-                        <button class="hero-button" type="button" onclick="nextStep()">Next</button>
-                        <button class="hero-button" onclick="togglePopup('formPopup')">Close</button>
+                        <button class="hero-button" type="button" onclick="nextStep()">Dalej</button>
+                        <button class="hero-button" onclick="togglePopup('formPopup')">Zamknij</button>
                     </div>
                 </div>
 
@@ -57,16 +61,14 @@
                     <?php foreach ($napoje as $item) : ?>
                             <label>
                                 <input type="checkbox" name="Napoje" value="<?php echo $item['Name']; ?>">
-                                <?php echo $item['Name']; ?><!--&nbsp</br><label>Waga: </label>
-                                <?php #echo $item['Size']; ?>&nbsp<label>Cena: </label>
-                                <?php #echo $item['Price']; ?> -->
+                                <?php echo $item['Name']; ?>
                         </label><br>
                     <?php endforeach; ?>
                 </div>
 
                 <div class="step-buttons"> 
-                    <button class="hero-button" type="button" onclick="nextStep()">Next</button>
-                    <button class="hero-button" onclick="togglePopup('formPopup')">Close</button>
+                    <button class="hero-button" type="button" onclick="nextStep()">Dalej</button>
+                    <button class="hero-button" onclick="togglePopup('formPopup')">Zamknij</button>
                 </div>
             </div>
 
@@ -78,21 +80,18 @@
                     <?php foreach ($alkohole as $item) : ?>
                         <label>
                             <input type="checkbox" name="Alkohole" value="<?php echo $item['Name']; ?>">
-                            <?php echo $item['Name']; ?><!-- &nbsp</br><label>%: </label>
-                            <?php #echo $item['Procent_of_alcohol']; ?>&nbsp</br><label>Cena: </label>
-                            <?php #echo $item['Price']; ?>&nbsp</br><label>Moc: </label>
-                            <?php #echo $item['Power']; ?> -->
+                            <?php echo $item['Name']; ?>
 
                         </label><br>
                     <?php endforeach; ?>
                 </div>
 
                 <div class="step-buttons">>
-                    <button class="hero-button" type="button" onclick="nextStep()">Next</button>
-                    <button class="hero-button" type="button" onclick="prevStep()">Back</button>
+                    <button class="hero-button" type="button" onclick="nextStep()">Dalej</button>
+                    <button class="hero-button" type="button" onclick="prevStep()">Cofnij</button>
                 </div>
                 <div class="step-buttons">
-                    <button class="hero-button" onclick="togglePopup('formPopup')">Close</button>
+                    <button class="hero-button" onclick="togglePopup('formPopup')">Zamknij</button>
                 </div>
 
             </div>
@@ -105,19 +104,17 @@
                         <label>
                             <input type="checkbox" name="Przekaski" value="<?php echo $item['Name']; ?>">
                             <?php echo $item['Name']; ?>
-                            <!-- &nbsp</br><label>Waga: </label>
-                            <?php #echo $item['Size']; ?>&nbsp<label>Cena: </label>
-                            <?php #echo $item['Price']; ?>  -->
+
                         </label><br>
                     <?php endforeach; ?>
                 </div>
 
                 <div class="step-buttons">
-                        <button class="hero-button" type="button" onclick="nextStep()">Next</button>
-                        <button class="hero-button" type="button" onclick="prevStep()">Back</button>
+                        <button class="hero-button" type="button" onclick="nextStep()">Dalej</button>
+                        <button class="hero-button" type="button" onclick="prevStep()">Cofnij</button>
                 </div>
                 <div class="step-buttons">
-                        <button class="hero-button" onclick="togglePopup('formPopup')">Close</button>
+                        <button class="hero-button" onclick="togglePopup('formPopup')">Zamknij</button>
                 </div>
             </div>
 
@@ -129,20 +126,18 @@
                     <?php foreach ($zaopatrzenie as $item) : ?>
                         <label>
                             <input type="checkbox" name="Zaopatrzenie" value="<?php echo $item['Name']; ?>">
-                            <?php echo $item['Name']; ?><!-- &nbsp</br><label>Waga: </label>
-                            <?php echo $item['Quantity']; ?>&nbsp<label>Cena: </label>
-                            <?php #echo $item['Price']; ?>-->
+                            <?php echo $item['Name']; ?>
                         </label><br>
                     <?php endforeach; ?>
                 </div>
 
                 <div class="step-buttons">
-                    <button class="hero-button" type="button" onclick="prevStep()">Back</button>
-                    <button class="hero-button" onclick="togglePopup('formPopup')">Close</button>
+                    <button class="hero-button" type="button" onclick="prevStep()">Cofnij</button>
+                    <button class="hero-button" onclick="togglePopup('formPopup')">Zamknij</button>
                 </div>
                 <div class="step-buttons">
                     
-                    <button class="hero-button" type="button" onclick="submitForm()">End form</button>
+                    <button class="hero-button" type="button" onclick="submitForm()">Podsumowanie</button>
                 </div>
             </div>
     </form>
@@ -152,10 +147,10 @@
 <div id="summaryPopup" class="popup">
     <h2>Podsumowanie</h2>
     <div id="summaryContent">
-            
+
     </div>
     <div class="step-buttons">
-        <button class="hero-button" onclick="togglePopup('summaryPopup')">Close</button>
+        <button class="hero-button" onclick="togglePopup('summaryPopup')">Zamknij</button>
     </div>
 </div>
 
